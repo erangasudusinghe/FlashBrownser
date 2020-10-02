@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    tools:visibility="visible">
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/SwipeToRefresh"
+        android:layout_width="366dp"
+        android:layout_height="541dp"
+        android:layout_marginBottom="208dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="367dp"
+            android:layout_height="507dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/SwipeToRefresh"
+            app:layout_constraintEnd_toEndOf="@id/SwipeToRefresh"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/SwipeToRefresh"
+            app:layout_constraintVertical_bias="0.0"
+            tools:visibility="visible" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="367dp"
+        android:layout_height="62dp"
+        android:background="#D7000000"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="180dp"
+        android:layout_height="26dp"
+        android:background="@drawable/rounded"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingBottom="3dp"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar3"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="25dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/icons8_home_50px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintEnd_toStartOf="@+id/url"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/BackButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icons8_home_50px"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:background="@drawable/rounded"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar3"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toEndOf="@+id/url"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?android:attr/actionModeWebSearchDrawable"
+        tools:ignore="MissingConstraints" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="366dp"
+        android:layout_height="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/BackButton"
+        android:layout_width="31dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ibtnripple"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintEnd_toStartOf="@+id/url"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="@+id/toolbar3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/icons8_back_to_50px"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/MenuButton"
+        android:layout_width="33dp"
+        android:layout_height="30dp"
+        android:background="@drawable/icons8_menu_vertical_50px_1"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar3"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icons8_menu_vertical_50px_1"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/ForwardButton"
+        android:layout_width="31dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/icons8_next_page_50px"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar3"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/BackButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icons8_next_page_50px" />
+
+    <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="168dp"
+        android:layout_height="296dp"
+        android:background="#A3000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16000003"
+        tools:ignore="InvalidId,MissingConstraints">
+
+        <Button
+            android:id="@+id/newTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple"
+            android:fontFamily="sans-serif"
+            android:text="  New tab"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/History"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newTab"
+            android:background="@drawable/ripple"
+            android:text="  History"
+            android:textAlignment="textStart"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/Download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/History"
+            android:background="@drawable/ripple"
+            android:text="  Download"
+            android:textAlignment="textStart"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/mbutton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Download"
+            android:background="@drawable/ripple"
+            android:text="  Share"
+            android:textAlignment="textStart"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/mbutton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mbutton4"
+            android:background="@drawable/ripple"
+            android:text="  Setting"
+            android:textAlignment="textStart"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/mbutton6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mbutton5"
+            android:background="@drawable/ripple"
+            android:text="  Helps"
+            android:textAlignment="textStart"
+            android:textColor="#000000" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
